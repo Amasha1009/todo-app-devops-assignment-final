@@ -2,19 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <!-- Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Todo List</h1>
+    <header>
+      <h1>Task Master</h1>
+      <p id="dateDisplay"></p>
+    </header>
 
     <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Enter a task" />
-      <button onclick="addTask()">Add</button>
+      <input type="text" id="taskInput" placeholder="What needs to be done?" />
+      <button id="addBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
     </div>
 
-    <ul id="taskList"></ul>
+    <div class="controls">
+      <span class="task-count"><span id="count">0</span> items left</span>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+    </div>
+
+    <ul id="taskList">
+      <!-- Tasks will be injected here -->
+    </ul>
   </div>
 
   <script src="scripts/app.js"></script>
