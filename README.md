@@ -142,7 +142,7 @@ An intentional merge conflict was created in the `README.md` file to demonstrate
 
 ### Installation
 ```bash
-git clone https://github.com/<username>/todo-app-devops-assignment.git
+git clone https://github.com/<Amasha1009>/todo-app-devops-assignment.git
 cd todo-app-devops-assignment
 npm install
 npm run build
